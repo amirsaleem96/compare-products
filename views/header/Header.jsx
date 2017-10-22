@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+/**
+ * @description Main class for entry point which contains all sections for header component
+ * @return html generated for header 
+*/
 class Header extends React.Component {
      constructor(props){
          super(props);
@@ -14,14 +18,11 @@ class Header extends React.Component {
      }
      render(){
          var names = ['Amir','Ashish','Rajneesh','Amir'];
+         var namesList = names.map(function(item,index){
+            return <p key={index}>{item}</p>  
+        }) 
          return(
-             <header>
-                 {
-                  names.map(function(item,index){
-                      return <button key={index}>{item}</button>  
-                  })  
-                 }
-             </header>
+             <header>{namesList}</header>
          )
      }
 }
