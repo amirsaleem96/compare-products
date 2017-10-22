@@ -22,9 +22,20 @@ class Header extends React.Component {
             return <p key={index}>{item}</p>  
         }) 
          return(
-             <header>{namesList}</header>
+             <header><Logo /></header>
          )
      }
+}
+
+class Logo extends React.Component {
+    constructor(props){
+        super(props);
+    }
+    render(){
+        return(
+            <h1>Logo</h1>
+        )
+    }
 }
 
 export default Header;
